@@ -72,10 +72,10 @@
     "workbox-webpack-plugin": "4.2.0"
   },
   "scripts": {
-    "start": "REACT_APP_API_URI=http://localhost:8000 node scripts/start.js",
-    "build": "REACT_APP_API_URI=https://8vz0ap7fjd.execute-api.eu-west-2.amazonaws.com/production node scripts/build.js",
+    "start": "node scripts/start.js",
+    "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "deploy": "aws s3 sync build/ s3://mandlebrot-client --profile Serverless --region eu-west-2"
+    "deploy": "node scripts/deploy.js"
   },
   "eslintConfig": {
     "extends": "react-app"

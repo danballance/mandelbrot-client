@@ -1,5 +1,10 @@
 'use strict';
 
+const PORT = process.env.PORT || 3000;
+if (!process.env.REACT_APP_API_URI) {
+    process.env.REACT_APP_API_URI = 'https://mandlebrot.serverless-api.io/v1';
+}
+
 // Do this as the first thing so that any code reading it knows the right env.
 process.env.BABEL_ENV = 'production';
 process.env.NODE_ENV = 'production';
